@@ -1,4 +1,5 @@
 # Marie-Ève — 2025-11-13
+
 class BusinessesController < ApplicationController
     def index
         @businesses = Business.order(name: :asc)

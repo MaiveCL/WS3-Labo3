@@ -1,6 +1,8 @@
 # Marie-Ève — 2025-11-13
 
 Rails.application.routes.draw do
+  get "mesmenus/index"
+  get "mesmenus/show"
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
