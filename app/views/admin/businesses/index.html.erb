@@ -1,8 +1,9 @@
 <!-- Maive — 2025-11-13 -->
 
-<h2>Liste ordonnée descendant</h2>
+<h2>Bienvenue sur notre site</h2>
 
 <ul>
+    <!-- Liste ordonnée descendant -->
     <% @businesses.each do |business| %>
         <li>
             <%= link_to business.name, admin_business_path(business) %>

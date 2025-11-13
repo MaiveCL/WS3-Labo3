@@ -4,10 +4,9 @@
 
 <ul>
 
-    <% @businesses.each do |b| %>
+    <% @businesses.each do |business| %>
         <li>
-            <!-- lien vers la page du commerce -->
-            <%= link_to b.name, business_path(b) %>
+            <%= link_to business.name, business_path(b) %>
         </li>
     <% end %>
 

@@ -19,7 +19,7 @@
 <% if @business.menus.any? %>
 
     <% @business.menus.each do |menu| %>
-        <%= render partial: 'businesses/menu', locals: { menu: menu } %>
+        <%= render partial: 'menu', locals: { menu: menu } %>
     <% end %>
 
 <% else %>
