@@ -1,0 +1,11 @@
+<!-- Maive — 2025-11-13 -->
+
+<h2>Liste ordonnée descendant</h2>
+
+<ul>
+    <% @businesses.each do |business| %>
+        <li>
+            <%= link_to business.name, admin_business_path(business) %>
+        </li>
+    <% end %>
+</ul>

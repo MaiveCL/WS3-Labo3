@@ -1,3 +1,5 @@
+# Marie-Ève — 2025-11-13
+
 Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -11,4 +13,13 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+  root "businesses#index"
+
+  resources :businesses, only: [:index, :show]
+
+  namespace :admin do
+    root "businesses#index"
+    resources :businesses, only: [:index, :show]
+  end
 end

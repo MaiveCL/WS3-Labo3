@@ -1,0 +1,14 @@
+<!-- Maive — 2025-11-13 -->
+
+<h2>Bienvenue sur notre site</h2>
+
+<ul>
+
+    <% @businesses.each do |b| %>
+        <li>
+            <!-- lien vers la page du commerce -->
+            <%= link_to b.name, business_path(b) %>
+        </li>
+    <% end %>
+
+</ul>

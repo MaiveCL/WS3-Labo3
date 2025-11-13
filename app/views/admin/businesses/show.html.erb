@@ -1,0 +1,27 @@
+<!-- Maive — 2025-11-13 -->
+
+<h1><%= @business.name %></h1>
+
+<p><strong>Description</strong><br>
+
+<p><%= @business.description || "Aucune description" %></p>
+<!-- <%= simple_format(@business.description || "Aucune description") %></p>  -->
+
+<p><strong>Site web</strong><br>
+
+<% if @business.site_web.present? %>
+  <p>
+    <%= link_to "Visiter le site web", @business.site_web, target: "_blank" %>
+  </p>
+<% end %>
+
+<h2>Menus</h2>
+<% if @business.menus.any? %>
+
+    <% @business.menus.each do |menu| %>
+        <%= render partial: 'businesses/menu', locals: { menu: menu } %>
+    <% end %>
+
+<% else %>
+    <p>Aucun menu disponible.</p>
+<% end %>

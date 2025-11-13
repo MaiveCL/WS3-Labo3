@@ -1,0 +1,20 @@
+<!-- Maive — 2025-11-13 -->
+
+<!-- Titre du menu -->
+<h3><%= menu.title %></h3>
+
+<!-- Liste des items de ce menu -->
+<ul>
+  <% menu.items.each do |item| %>
+    <li>
+      <!-- Nom item en gras, description et prix -->
+      <strong><%= item.name %></strong> - <%= item.description %> (<%= number_to_currency(item.price) %>)
+    </li>
+  <% end %>
+</ul>
+
+<!-- Boucle sur les sous-menus si le menu en contient -->
+<% menu.menus.each do |sub_menu| %>
+    <!-- Appel récursif pour afficher les sous-menus avec leurs items -->
+    <%= render partial: 'menu', locals: { menu: sub_menu } %>
+<% end %>
