@@ -1,5 +1,9 @@
 source "https://rubygems.org"
 
+# Mise a jour par Marie-Eve Bouchard — 2025-11-13
+
+# Flexible authentication solution for Rails with Warden
+gem 'devise', '~> 4.9', '>= 4.9.4'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 8.0.2"
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
