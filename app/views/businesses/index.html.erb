@@ -6,7 +6,7 @@
 
     <% @businesses.each do |business| %>
         <li>
-            <%= link_to business.name, business_path(b) %>
+            <%= link_to business.name, business_path(business) %>
         </li>
     <% end %>
 
