@@ -1,2 +1,26 @@
-<h1>Mesmenus#show</h1>
-<p>Find me in app/views/mesmenus/show.html.erb</p>
+<!-- Marie-Ève — 2025-11-13 
+
+<p>
+  <%= link_to "Tous les Restaurants", root_path %> /
+  <%= link_to "Mes menus", mesmenus_path %> /
+  <%= @business.name %>
+</p>
+<%= button_to "Se déconnecter", destroy_user_session_path, method: :delete %>
+-->
+
+<%= render "shared/fil_ariane" %>
+
+<h1><%= @business.name %></h1>
+
+<p><strong>Description:</strong><br>
+<%= @business.description || "Aucune description" %></p>
+
+<% if @business.menus.any? %>
+
+    <% @business.menus.each do |menu| %>
+        <%= render partial: 'menu', locals: { menu: menu } %>
+    <% end %>
+
+<% else %>
+    <p>Aucun menu disponible.</p>
+<% end %>

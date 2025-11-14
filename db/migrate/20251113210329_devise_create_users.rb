@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+# Marie-Eve Bouchard — 2025-11-13
 
 class DeviseCreateUsers < ActiveRecord::Migration[8.0]
   def change

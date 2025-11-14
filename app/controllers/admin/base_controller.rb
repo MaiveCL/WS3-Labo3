@@ -1,6 +1,10 @@
 # Marie-Ève — 2025-11-13
 class Admin::BaseController < ApplicationController
-    # Structure préparée pour de futures vérifications admin
-    # Ne pas implémenter d'authentification réelle pour ce laboratoire,
-    # seulement conserver l'architecture.
+    before_action :authenticate_user!
+    before_action :is_admin?
+
+    private
+    def is_admin?
+        redirect_to root_path unless current_user&.admin?
+    end
 end

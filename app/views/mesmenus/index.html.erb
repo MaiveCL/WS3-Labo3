@@ -1,2 +1,24 @@
-<h1>Mesmenus#index</h1>
-<p>Find me in app/views/mesmenus/index.html.erb</p>
+<!-- Marie-Ève — 2025-11-13 
+
+<p>
+  <%= link_to "Tous les Restaurants", root_path %> /
+  <%= link_to "Mes menus", mesmenus_path %> / ...
+</p>
+  <%= button_to "Se déconnecter", destroy_user_session_path, method: :delete %>
+</p>
+
+-->
+
+<%= render "shared/fil_ariane" %>
+
+<h1>Mes restaurants</h1>
+
+<% if @businesses.any? %>
+  <ul>
+    <% @businesses.each do |business| %>
+      <li><%= link_to business.name, mesmenu_path(business) %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>Vous n’avez pas encore de restaurant.</p>
+<% end %>
