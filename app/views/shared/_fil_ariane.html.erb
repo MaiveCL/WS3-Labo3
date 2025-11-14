@@ -1,6 +1,6 @@
 <p>
+  <%= link_to "Accueil", root_path %> /
   <% if user_signed_in? %>
-    <%= link_to "Accueil", root_path %> /
     <%= link_to "Mes menus", mesmenus_path %>
 
     <% current_business = local_assigns[:business] || (defined?(@business) && @business) %>
